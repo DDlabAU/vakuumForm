@@ -1,4 +1,6 @@
-
+/* ─────────────────────────────────────────
+   RESET & VARIABLER
+───────────────────────────────────────── */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,12 +9,18 @@
 }
 
 :root {
-  --bg: #faf9f7;
-  --text: #2c2c2a;
-  --muted: #9a9690;
+  --bg:     #faf9f7;
+  --text:   #2c2c2a;
+  --muted:  #9a9690;
   --border: #e4e1db;
   --accent: #5c7a5c;
+  --font:   'Century Gothic', Futura, sans-serif;
 }
+
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
 
 html {
   scroll-behavior: smooth;
@@ -21,21 +29,96 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Century Gothic', Futura, sans-serif;
+  font-family: var(--font);
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.7;
 }
 
 main {
-  max-width: 660px;
+  width: min(660px, 100%);
   margin: 0 auto;
-  padding: 4rem 1.5rem 8rem;
+  padding: 4rem 0 8rem;
 }
 
-/* ── Indholdsfortegnelse ── */
-.toc {
-  margin-bottom: 3rem;
+.section {
+  margin-bottom: 5rem;
+}
+
+.subsection {
+  margin-top: 1rem;
+}
+
+.project-grid {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: stretch;
+}
+
+.project-main {
+  flex: 0 0 60%;
+  min-width: 0;
+}
+
+.project-side {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-side figure {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-strip {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.strip-item {
+  flex: 1;
+  transition: flex 0.4s ease, opacity 0.4s ease;
+}
+
+.strip-item:hover {
+  flex: 3;
+}
+
+.project-strip:has(.strip-item:hover) .strip-item:not(:hover) {
+  opacity: 0.4;
+}
+
+
+/* ─────────────────────────────────────────
+   TYPOGRAFI
+───────────────────────────────────────── */
+
+.section h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.0rem;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.subsection h1 {
+  font-size: 1.0rem;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
 
 .toc-title {
@@ -47,20 +130,9 @@ main {
   margin-bottom: 1rem;
 }
 
-.toc ol {
-  list-style: none;
-  border-top: 1px solid var(--border);
-}
-
-.toc li {
-  border-bottom: 1px solid var(--border);
-  padding: 0.6rem 0;
-}
-
 .toc a {
   color: var(--text);
   text-decoration: none;
-  font-size: 0.95rem;
   transition: color 0.2s;
 }
 
@@ -68,41 +140,46 @@ main {
   color: var(--accent);
 }
 
-/* ── TLDR ── */
 .tldr {
   font-size: 0.875rem;
   color: var(--muted);
   margin-bottom: 2.5rem;
 }
 
-.tldr a {
+a {
   color: var(--accent);
-  text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* ── Hero billede ── */
-.hero-img {
-  margin-bottom: 4rem;
+figcaption {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
 }
 
-.hero-img img {
+
+/* ─────────────────────────────────────────
+   BILLEDER
+───────────────────────────────────────── */
+
+.header-img {
+  max-width: 300px;
+  margin: 1.5rem 0 4rem;
+}
+
+.header-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img {
   width: 100%;
   display: block;
 }
 
-/* ── Sektioner ── */
-.section {
-  margin-bottom: 5rem;
-}
-
-.section h1 {
-  font-family: 'Century Gothic', Futura, sans-serif;
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 1.25;
-  margin-bottom: 1.5rem;
-  color: var(--text);
+.hero-img {
+  margin-bottom: 4rem;
 }
 
 .section-img {
@@ -111,5 +188,83 @@ main {
 
 .section-img img {
   width: 50%;
-  display: block;
+}
+
+.project-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-side img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+
+.strip-item img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  transition: aspect-ratio 0.4s ease;
+}
+
+.strip-item:hover img {
+  aspect-ratio: 3 / 4;
+}
+
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .project-grid {
+    flex-direction: column;
+  }
+
+  .project-main,
+  .project-side {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .project-main img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 2.5rem 0 5rem;
+  }
+
+  .header-img {
+    max-width: 100%;
+  }
+
+  .hero-img,
+  .section-img img {
+    width: 100%;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   INDHOLDSFORTEGNELSE
+───────────────────────────────────────── */
+
+.toc {
+  margin-bottom: 3rem;
+}
+
+.toc ol {
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.toc li {
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 0;
 }
