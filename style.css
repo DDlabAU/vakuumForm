@@ -1,3 +1,6 @@
+/* obs, very much AI generated CSS fil 
+
+
 /* ─────────────────────────────────────────
    RESET & VARIABLER
 ───────────────────────────────────────── */
@@ -59,6 +62,14 @@ main {
 
 .project-main {
   flex: 0 0 60%;
+  min-width: 0;
+  display: flex;
+}
+
+.project-main figure {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   min-width: 0;
 }
 
@@ -158,6 +169,7 @@ figcaption {
 }
 
 
+
 /* ─────────────────────────────────────────
    BILLEDER
 ───────────────────────────────────────── */
@@ -187,12 +199,18 @@ img {
 }
 
 .section-img img {
-  width: 50%;
+  width: 60%;
+  
+}
+
+.subsection img {
+  margin-top: 1rem;
+  width: 60%;
 }
 
 .project-main img {
   width: 100%;
-  height: 100%;
+  flex: 1;
   object-fit: cover;
 }
 
@@ -213,26 +231,31 @@ img {
   aspect-ratio: 3 / 4;
 }
 
+.sub_toc img {
+  margin-top: 0.4rem;
+  width: 60%;
+ 
+}
+
+
+.img-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.img-row img {
+  width: 50%;
+  margin-top: 0;
+}
+
+
 
 /* ─────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────── */
 
 @media (max-width: 900px) {
-  .project-grid {
-    flex-direction: column;
-  }
-
-  .project-main,
-  .project-side {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-
-  .project-main img {
-    height: auto;
-    aspect-ratio: 4 / 3;
-  }
 }
 
 @media (max-width: 640px) {
@@ -268,3 +291,41 @@ img {
   border-bottom: 1px solid var(--border);
   padding: 0.6rem 0;
 }
+
+.sub_toc {
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.sub_toc ol {
+  list-style: none;
+  border-top: none;
+}
+
+.sub_toc li {
+  border-bottom: none;
+  padding: 0.6rem 0.6rem;
+  font-size: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.sub_toc li::before {
+  content: "";
+  display: inline-block;
+  width: 0.6rem;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.sub_toc_text {
+  flex-basis: 100%;
+  margin-top: 0.4rem;
+  margin-left: calc(0.6rem + 0.5rem);
+  font-size: inherit;
+}
+
