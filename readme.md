@@ -1,5 +1,7 @@
 # Guide til Formart SE vakuumformer
 
+<div class="toc" markdown="1">
+
 ## Indhold
 
 1. [Guide til FORMART SE](#guide-til-formart-se)
@@ -7,13 +9,31 @@
 3. [step-by-step](#step-by-step)
 4. [Eksempel projekt](#eksempel-projekt)
 
+</div>
+
+<div class="tldr" markdown="1">
+
 **TLDR:** Link til officiel guide [her](https://www.youtube.com/watch?v=s0XORjr9Ifk).
+
+</div>
+
+<div class="hero-img" markdown="1">
 
 ![How to formpress](img/how-to.png)
 
+</div>
+
+<div class="section" markdown="1">
+
 ## Guide til FORMART SE
 
+<div class="section-img" markdown="1">
+
 ![Formpress](https://cdn.webshopapp.com/shops/347309/files/448039901/1652x1652x2/my-yard-formart-se.jpg)
+
+</div>
+
+<div class="toc" markdown="1">
 
 ### Indhold
 
@@ -21,17 +41,25 @@
 2. [Ekstraudstyr](#ekstra-udstyr)
 3. [step-by-step](#step-by-step)
 
+</div>
+
 ### TBA
 
 #### Materialer
 
 #### Ekstra udstyr
 
+</div>
+
+<div class="section" markdown="1">
+
 ## Forme til at vakuumforme
 
 Man kan lave en form til at vakuumforme på flere måder. Enten ved at støbe over et allerede eksisterende objekt, eller ved at lave en form selv. I DDlab har vi materialer til at lave forme af træ, ler og med 3D print.
 
 Når man laver en form er der flere parametre, man skal overveje:
+
+<div class="sub_toc" markdown="1">
 
 1. **Draft Angle**
 
@@ -58,6 +86,12 @@ Når man laver en form er der flere parametre, man skal overveje:
 
 [Link til grundig gennemgang af, hvordan man 3D-printer forme](https://www.vaquform.com/blogs/news/how-to-3d-print-molds-for-vacuum-forming).
 
+</div>
+
+</div>
+
+<div class="section steps" markdown="1">
+
 ## step-by-step
 Se denne video og følg disse steps
 [video](https://www.youtube.com/watch?v=rdYpeUXXXgs)
@@ -73,9 +107,9 @@ Se denne video og følg disse steps
 - vent til skærmen siger du må frigive.
 - godt arbejde du er færdig
 
+</div>
 
-
-
+<div class="section" markdown="1">
 
 ## Eksempel projekt
 
@@ -115,4 +149,6 @@ Se denne video og følg disse steps
   <img src="img/IMG_molded_sheet_n_form.jpg" alt="Lampen samles" />
   <figcaption>Pladen klippes til, og lamperne samles.</figcaption>
 </figure>
+</div>
+
 </div>
