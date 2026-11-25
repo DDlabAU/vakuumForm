@@ -1,0 +1,10 @@
+title: Guide til Formart SE vakuumformer
+baseurl: /vakuumForm
+url: https://ddlabau.github.io
+markdown: kramdown
+defaults:
+  - scope:
+      path: "readme.md"
+    values:
+      layout: default
+      permalink: /

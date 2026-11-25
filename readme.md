@@ -4,7 +4,8 @@
 
 1. [Guide til FORMART SE](#guide-til-formart-se)
 2. [Forme til at vakuumforme](#forme-til-at-vakuumforme)
-3. [Eksempel projekt](#eksempel-projekt)
+3. [step-by-step](#step-by-step)
+4. [Eksempel projekt](#eksempel-projekt)
 
 **TLDR:** Link til officiel guide [her](https://www.youtube.com/watch?v=s0XORjr9Ifk).
 
@@ -18,7 +19,7 @@
 
 1. [Materialer](#materialer)
 2. [Ekstraudstyr](#ekstra-udstyr)
-3. [step-by-step](#step)
+3. [step-by-step](#step-by-step)
 
 ### TBA
 
@@ -59,7 +60,8 @@ Når man laver en form er der flere parametre, man skal overveje:
 
 ## step-by-step
 Se denne video og følg disse steps
-[video] (https://www.youtube.com/watch?v=rdYpeUXXXgs)
+[video](https://www.youtube.com/watch?v=rdYpeUXXXgs)
+
 - tænd maskinen på bagsiden
 - vælg simple mode
 - vælg hvor tæt materialet skal sidde med, rough, standard eller fine. 
@@ -77,30 +79,40 @@ Se denne video og følg disse steps
 
 ## Eksempel projekt
 
-![Projektbillede](img/IMG_final_product.jpg)
+<div class="project-grid">
+<div class="project-main">
+<figure>
+  <img src="img/IMG_final_product.jpg" alt="Projektbillede" />
+  <figcaption>De 3 lamper lavet med vakuumformen</figcaption>
+</figure>
+</div>
+<div class="project-side">
+<figure>
+  <img src="img/IMG_materials.jpg" alt="De anvendte materialer" />
+  <figcaption>Materialer brugt til lamperne</figcaption>
+</figure>
+<figure>
+  <img src="img/IMG_molds.jpg" alt="Forme" />
+  <figcaption>3D-printede forme i PETG</figcaption>
+</figure>
+</div>
+</div>
 
-*De 3 lamper lavet med vakuumformen*
-
-![De anvendte materialer](img/IMG_materials.jpg)
-
-*Materialer brugt til lamperne*
-
-![Forme](img/IMG_molds.jpg)
-
-*3D-printede forme i PETG*
-
-![Plastikplade sættes i maskine](img/IMG_sheet_loaded.jpg)
-
-*Plastikpladen skæres til den mindre indstilling på FORMART. Derefter tændes maskinen, og pladen sættes i som instrueret på skærmen.*
-
-![Forme indsættes](img/IMG_molds_loaded.jpg)
-
-*Efter opvarmning af pladen placeres de to forme.*
-
-![Plastikpladen vakuumformes](img/IMG_vacuum_done.jpg)
-
-*Plastikpladen vakuumformes rundt om de to forme.*
-
-![Lampen samles](img/IMG_molded_sheet_n_form.jpg)
-
-*Pladen klippes til, og lamperne samles.*
+<div class="project-strip">
+<figure class="strip-item">
+  <img src="img/IMG_sheet_loaded.jpg" alt="Plastikplade sættes i maskine" />
+  <figcaption>Plastikpladen skæres til den mindre indstilling på FORMART. Derefter tændes maskinen, og pladen sættes i som instrueret på skærmen.</figcaption>
+</figure>
+<figure class="strip-item">
+  <img src="img/IMG_molds_loaded.jpg" alt="Forme indsættes" />
+  <figcaption>Efter opvarmning af pladen placeres de to forme.</figcaption>
+</figure>
+<figure class="strip-item">
+  <img src="img/IMG_vacuum_done.jpg" alt="Plastikpladen vakuumformes" />
+  <figcaption>Plastikpladen vakuumformes rundt om de to forme.</figcaption>
+</figure>
+<figure class="strip-item">
+  <img src="img/IMG_molded_sheet_n_form.jpg" alt="Lampen samles" />
+  <figcaption>Pladen klippes til, og lamperne samles.</figcaption>
+</figure>
+</div>

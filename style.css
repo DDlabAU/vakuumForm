@@ -1,4 +1,4 @@
-/* obs, very much AI generated CSS fil 
+/* Original site styling. */
 
 
 /* ─────────────────────────────────────────
@@ -329,3 +329,64 @@ img {
   font-size: inherit;
 }
 
+
+/* Markdown content uses the same visual language as the original HTML. */
+.guide > h1,
+.guide > h2:not(#indhold) {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+.guide > h1 { margin-bottom: 3rem; }
+.guide > h2:not(#indhold) { margin-top: 5rem; }
+.guide h3, .guide h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.guide p { margin-bottom: 1rem; }
+.guide > ul, .guide > ol { padding-left: 1.5rem; margin-bottom: 2rem; }
+.guide li { margin-bottom: 0.6rem; }
+.guide li p { margin-top: 0.4rem; }
+.guide li img { width: 60%; margin-top: 0.4rem; }
+.guide h2, .guide h3, .guide h4 { scroll-margin-top: 1rem; }
+.guide h2[id^="indhold"], .guide h3[id^="indhold"] {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.guide [id^="indhold"] + ol {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+.guide [id^="indhold"] + ol li {
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 0;
+  margin: 0;
+}
+.guide [id^="indhold"] + ol a { color: var(--text); text-decoration: none; }
+.guide [id^="indhold"] + ol a:hover { color: var(--accent); }
+.guide #indhold + ol + p { font-size: 0.875rem; color: var(--muted); margin-bottom: 2.5rem; }
+.guide img[src="img/how-to.png"] { margin-bottom: 4rem; }
+.guide #guide-til-formart-se + p img { width: 60%; margin-top: 2rem; }
+.guide li p:has(img + img) { display: flex; gap: 1rem; }
+.guide li p:has(img + img) img { width: calc(50% - 0.5rem); object-fit: contain; }
+@media (max-width: 700px) {
+  main { padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+@media (max-width: 640px) {
+  .guide #guide-til-formart-se + p img, .guide li img { width: 100%; }
+  .project-grid { flex-direction: column; }
+  .project-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-strip:has(.strip-item:hover) .strip-item:not(:hover) { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .strip-item, .strip-item img { transition: none; }
+}
